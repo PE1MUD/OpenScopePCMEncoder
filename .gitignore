@@ -1,0 +1,60 @@
+# Visual Studio / IDE
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# CMake / build output
+build/
+build-*/
+out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+vcpkg_installed/
+
+# Compiler / linker output
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+x64/
+x86/
+bin/
+obj/
+*.obj
+*.o
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Generated Qt / DeckLink files
+*_autogen/
+decklink_generated/
+qt.conf
+
+# Local SDK copies: required separately, not redistributed here
+ASIOSDK/
+asiosdk/
+asio/
+DeckLink SDK*/
+Blackmagic DeckLink SDK*/
+
+# Logs, temporary files and local archives
+*.log
+*.tmp
+*.bak
+*~
+*.zip
+*.7z
+*.rar

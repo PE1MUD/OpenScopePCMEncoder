@@ -1,0 +1,7 @@
+{
+  "name": "openscope-pcm-encoder",
+  "version-string": "0.9.0",
+  "dependencies": [
+    "qtbase"
+  ]
+}
