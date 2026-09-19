@@ -31,7 +31,7 @@ Live view of completion margin, filtered buffer depth and temporary position nud
 ### Fullscreen MUDTW meter
 ![Fullscreen MUDTW meter](docs/images/mudtw-fullscreen.png)
 
-Fullscreen MUDTW front-panel meter with segmented dual-channel level display.
+Fullscreen MUDTW front-panel meter with segmented dual-channel level display (F11 makes it truly fullscreen!).
 
 ## Main features
 
