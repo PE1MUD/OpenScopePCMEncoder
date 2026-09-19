@@ -6,6 +6,33 @@ Current source version: **0.9.0**.
 
 The application captures stereo audio through **ASIO**, performs low-latency asynchronous sample-rate conversion to 44.1 kHz, encodes PCM audio into a PAL 625/50 video raster, and outputs it through a **Blackmagic DeckLink** device. It includes live PPM meters and controls for PCM mode, pre-emphasis, pulse shaping, video placement and low-latency buffer behaviour.
 
+## Screenshots
+
+### Main window
+![OpenScope PCM Encoder main window](docs/images/main-window.png)
+
+Main encoder view showing ASIO input selection, DeckLink output selection, PCM mode selection, front-panel style meters and ON-AIR status.
+
+### Advanced controls
+![OpenScope PCM Encoder advanced controls](docs/images/advanced-controls.png)
+
+Video shaping and timing-related controls including video bandwidth, horizontal offset and the ASRC target buffer.
+
+### Debug status
+![OpenScope PCM Encoder debug status](docs/images/debug-status.png)
+
+Status overview with ASIO driver capabilities, TX margin, underrun counters, latency budget and active encoder settings.
+
+### JIT / buffer control graph
+![JIT completion margin and buffer control](docs/images/jit-buffer-graph.png)
+
+Live view of completion margin, filtered buffer depth and temporary position nudges used by the low-latency ASRC/JIT control loop.
+
+### Fullscreen MUDTW meter
+![Fullscreen MUDTW meter](docs/images/mudtw-fullscreen.png)
+
+Fullscreen MUDTW front-panel meter with segmented dual-channel level display.
+
 ## Main features
 
 - PAL 625/50, 720x576 UYVY DeckLink output
@@ -98,12 +125,13 @@ src/
   PpmMeter.*                stereo meter rendering
   MainWindow.*              Qt user interface
 
-docs/history/               historical per-version development notes
+docs/images/                screenshots used in this README
+HISTORY.md                  condensed project development history
 ```
 
 ## Development notes
 
-The project evolved rapidly and the original per-version README files are retained under [`docs/history`](docs/history/) as a development record. They are useful when tracking the history of the ASRC, timing controller, PCM raster mapping and UI changes.
+A condensed development history is included in [`HISTORY.md`](HISTORY.md). It summarises the major milestones behind the Sony/EIAJ encoder path, Ham PCM path, ASIO-based low-latency audio pipeline, JIT/ASRC timing control, video shaping and UI evolution.
 
 ## Licence
 
