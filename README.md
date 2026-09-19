@@ -1,17 +1,17 @@
 # OpenScope PCM Encoder
 
-Standalone Windows PAL PCM-video encoder for use with OpenScope and compatible PCM-F1 / EIAJ-style decoders.
+Standalone Windows PAL PCM-video encoder for use with OpenScope and compatible PCM-F1 / EIAJ-style decoders, with dedicated HAM PCM V2.0 support.
 
 Current source version: **0.9.0**.
 
-The application captures stereo audio through **ASIO**, performs low-latency asynchronous sample-rate conversion to 44.1 kHz, encodes PCM audio into a PAL 625/50 video raster, and outputs it through a **Blackmagic DeckLink** device. It includes live PPM meters and controls for PCM mode, pre-emphasis, pulse shaping, video placement and low-latency buffer behaviour.
+The application captures stereo audio through **ASIO**, performs low-latency asynchronous sample-rate conversion, encodes audio as **PCM-F1 / EIAJ** or **HAM PCM V2.0**, places it into a PAL 625/50 video raster, and outputs it through a **Blackmagic DeckLink** device. It includes live PPM meters and controls for PCM mode, pre-emphasis, pulse shaping, video placement and low-latency buffer behaviour.
 
 ## Screenshots
 
 ### Main window
 ![OpenScope PCM Encoder main window](docs/images/main-window.png)
 
-Main encoder view showing ASIO input selection, DeckLink output selection, PCM mode selection, front-panel style meters and ON-AIR status.
+Main encoder view showing ASIO input selection, DeckLink output selection, PCM-F1 / EIAJ / HAM PCM V2.0 mode selection, front-panel style meters and ON-AIR status.
 
 ### Advanced controls
 ![OpenScope PCM Encoder advanced controls](docs/images/advanced-controls.png)
@@ -37,6 +37,7 @@ Fullscreen MUDTW front-panel meter with segmented dual-channel level display.
 
 - PAL 625/50, 720x576 UYVY DeckLink output
 - 16-bit PCM-F1 and 14-bit EIAJ-style PCM modes
+- HAM PCM V2.0 mode (48 kHz / 14-bit)
 - EIAJ control-H generation
 - 50/15 us pre-emphasis control
 - ASIO audio input
@@ -106,7 +107,7 @@ After a successful build, CMake runs `windeployqt` when it can find it and also 
 2. Install/configure an ASIO-capable audio source.
 3. Start OpenScope PCM Encoder.
 4. Select the ASIO input and DeckLink output device.
-5. Choose the required PCM mode and video settings.
+5. Choose PCM-F1, EIAJ or HAM PCM V2.0 and set the required video options.
 6. Start the encoder output.
 7. Feed the generated PAL signal into OpenScope or another compatible PCM-F1/EIAJ decoder.
 
